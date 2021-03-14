@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  background-color: #c3cfe2;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  color: #fff;
+}
+
+
+.wrapper {
+  position: relative;
+}
+
+.social-media {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &__btn {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    right: -180px;
+    position: relative;
+    cursor: pointer;
+    transition: right 500ms ease;
+
+    &::before {
+      font-family: "Font Awesome 5 Brands";
+      color: #fff;
+      width: 30px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    &:hover {
+      right: 0;
+    }
+
+    p {
+      margin-left: 15px;
+    }
+
+    &.blog {
+      background-color: #e17b77;
+
+      &::before  {
+        content: "\f5fc";
+        font-family: "Font Awesome 5 Pro";
+      }
+    }
+
+    &.twitter {
+      background-color: #00aced;
+      &::before  {
+        content: "\f099";
+      }
+    }
+
+    &.linkedin {
+      background-color: #007bb6;
+      &::before  {
+        content: "\f0e1";
+      }
+    }
+
+    &.facebook {
+      background-color: #3b5998;
+      &::before  {
+        content: "\f39e";
+      }
+    }
+
+    &.github {
+      background-color: #333;
+      &::before  {
+        content: "\f09b";
+      }
+    }
+  }
+}

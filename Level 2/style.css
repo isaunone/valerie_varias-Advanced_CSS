@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  background-color: #c3cfe2;
+  line-height: 1.6;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 95%;
+  margin: 2rem auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card__body {
+  padding: 30px 30px 70px;
+}
+
+.card__footer {
+  background-color: #686de0;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 30px;
+}
+
+.card__image img {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: -50px;
+  position: relative;
+}
+
+.card .user__name {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card .user__website {
+  opacity: 0.7;
+}
+
+.card .btn-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #1b2650;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
+}
+
+.card .btn-container:hover {
+  opacity: 1;
+}
+
+.card .btn-container .btn {
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 991px) {
+  .wrapper {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
